@@ -1,23 +1,33 @@
 package vn.hodanit.laptopshop.domain;
 
-public class User {
-    private long id;
-    private String emai, password, fullName, address, phone;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+// import jakarta.persistence.Table;
 
-    public long getId() {
+@Entity
+// @Table(name = "users")
+public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    private String email, password, fullName, address, phone;
+
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public String getEmai() {
-        return emai;
+    public String getemail() {
+        return email;
     }
 
-    public void setEmai(String emai) {
-        this.emai = emai;
+    public void setemail(String email) {
+        this.email = email;
     }
 
     public String getPassword() {
@@ -54,7 +64,8 @@ public class User {
 
     @Override
     public String toString() {
-        return "User [id=" + id + ", emai=" + emai + ", password=" + password + ", fullName=" + fullName + ", address="
+        return "User [id=" + id + ", email=" + email + ", password=" + password + ", fullName=" + fullName
+                + ", address="
                 + address + ", phone=" + phone + "]";
     }
 
