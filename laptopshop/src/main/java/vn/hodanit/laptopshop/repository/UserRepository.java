@@ -8,10 +8,12 @@ import org.springframework.stereotype.Repository;
 import vn.hodanit.laptopshop.domain.User;
 
 @Repository
-public interface UserRepository extends JpaRepository<User, Integer> {
+public interface UserRepository extends JpaRepository<User, Long> {
     User save(User envidi);
 
     List<User> findByEmail(String email);
 
     User findById(int id);
+
+    User deleteById(int id);
 }

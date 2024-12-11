@@ -38,9 +38,11 @@
                                             <td>${list.email}</td>
                                             <td>${list.fullName}</td>
                                             <td>
-                                                <button class="btn btn-success">View</button>
-                                                <button class="btn btn-warning">Update</button>
-                                                <button class="btn btn-danger">Delete</button>
+                                                <a href="/admin/user/${list.id}" class="btn btn-success">View</a>
+                                                <a href="/admin/user/update/${list.id}"
+                                                    class="btn btn-warning">Update</a>
+                                                <a href="/admin/user/delete/${list.id}"
+                                                    class="btn btn-danger">Delete</a>
                                             </td>
                                         </tr>
                                     </c:forEach>
@@ -51,6 +53,7 @@
 
                     </div>
                 </div>
+
 
             </body>
 
