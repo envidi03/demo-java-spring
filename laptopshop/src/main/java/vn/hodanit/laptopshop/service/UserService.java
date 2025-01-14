@@ -29,11 +29,11 @@ public class UserService {
         return this.userRepository.findAll();
     }
 
-    public User getUserById(int id) {
+    public User getUserById(long id) {
         return this.userRepository.findById(id);
     }
 
-    public User getDeteleUserById(int id) {
+    public User getDeteleUserById(long id) {
         return this.userRepository.deleteById(id);
     }
 

@@ -36,11 +36,11 @@ public class User {
         this.id = id;
     }
 
-    public String getemail() {
+    public String getEmail() {
         return email;
     }
 
-    public void setemail(String email) {
+    public void setEmail(String email) {
         this.email = email;
     }
 
@@ -82,6 +82,22 @@ public class User {
 
     public void setAvatar(String avatar) {
         this.avatar = avatar;
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
+
+    public List<Order> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(List<Order> orders) {
+        this.orders = orders;
     }
 
     @Override
